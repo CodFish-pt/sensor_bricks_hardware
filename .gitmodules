@@ -1,0 +1,3 @@
+[submodule "cf_sensor_brick_model"]
+	path = cf_sensor_brick_model
+	url = https://github.com/pedrominatel/cf_sensor_brick_model
