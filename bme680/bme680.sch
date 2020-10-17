@@ -1,0 +1,506 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Bosch BME680 Lego Brick Model"
+Date "2020-10-17"
+Rev "1A"
+Comp "CodFish"
+Comment1 "Author: Pedro Minatel"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L LEGO:lego_1x2 MECH1
+U 1 1 5F8199B5
+P 3500 2300
+F 0 "MECH1" H 3728 2546 50  0000 L CNN
+F 1 "lego_1x2" H 3728 2455 50  0000 L CNN
+F 2 "LEGO:lego_1x2" H 3500 2300 50  0001 C CNN
+F 3 "" H 3500 2300 50  0001 C CNN
+	1    3500 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L LEGO:lego_1x2 MECH2
+U 1 1 5F81A4DB
+P 3500 2850
+F 0 "MECH2" H 3728 3096 50  0000 L CNN
+F 1 "lego_1x2" H 3728 3005 50  0000 L CNN
+F 2 "LEGO:lego_1x2" H 3500 2850 50  0001 C CNN
+F 3 "" H 3500 2850 50  0001 C CNN
+	1    3500 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x04_Male J1
+U 1 1 5F81AB6D
+P 4950 2400
+F 0 "J1" H 5058 2681 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 4750 2100 50  0000 C CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x04_P2.00mm_Vertical" H 4950 2400 50  0001 C CNN
+F 3 "~" H 4950 2400 50  0001 C CNN
+	1    4950 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5F81C289
+P 5250 2700
+F 0 "#PWR0101" H 5250 2450 50  0001 C CNN
+F 1 "GND" H 5255 2527 50  0000 C CNN
+F 2 "" H 5250 2700 50  0001 C CNN
+F 3 "" H 5250 2700 50  0001 C CNN
+	1    5250 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0102
+U 1 1 5F81CE51
+P 5250 2200
+F 0 "#PWR0102" H 5250 2050 50  0001 C CNN
+F 1 "+3V3" H 5265 2373 50  0000 C CNN
+F 2 "" H 5250 2200 50  0001 C CNN
+F 3 "" H 5250 2200 50  0001 C CNN
+	1    5250 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 2300 5250 2300
+Wire Wire Line
+	5250 2300 5250 2200
+Wire Wire Line
+	5150 2600 5250 2600
+Wire Wire Line
+	5250 2600 5250 2700
+$Comp
+L Device:R_Small_US R1
+U 1 1 5F81DB96
+P 5500 2200
+F 0 "R1" H 5568 2246 50  0000 L CNN
+F 1 "10kR" H 5568 2155 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 5500 2200 50  0001 C CNN
+F 3 "~" H 5500 2200 50  0001 C CNN
+	1    5500 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R2
+U 1 1 5F81E871
+P 5900 2200
+F 0 "R2" H 5968 2246 50  0000 L CNN
+F 1 "10kR" H 5968 2155 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 5900 2200 50  0001 C CNN
+F 3 "~" H 5900 2200 50  0001 C CNN
+	1    5900 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0103
+U 1 1 5F81ED1F
+P 9200 1950
+F 0 "#PWR0103" H 9200 1800 50  0001 C CNN
+F 1 "+3V3" H 9215 2123 50  0000 C CNN
+F 2 "" H 9200 1950 50  0001 C CNN
+F 3 "" H 9200 1950 50  0001 C CNN
+	1    9200 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 2000 5700 2050
+Wire Wire Line
+	5700 2050 5500 2050
+Wire Wire Line
+	5500 2050 5500 2100
+Wire Wire Line
+	5700 2050 5900 2050
+Wire Wire Line
+	5900 2050 5900 2100
+Connection ~ 5700 2050
+Wire Wire Line
+	5150 2400 5500 2400
+Wire Wire Line
+	5500 2400 5500 2300
+Wire Wire Line
+	5150 2500 5900 2500
+Wire Wire Line
+	5900 2500 5900 2300
+Text GLabel 6000 2500 2    50   Input ~ 0
+SCL
+Text GLabel 5600 2400 2    50   Input ~ 0
+SDA
+Connection ~ 5500 2400
+Wire Wire Line
+	5900 2500 6000 2500
+Connection ~ 5900 2500
+Wire Wire Line
+	5500 2400 5600 2400
+$Comp
+L Connector:TestPoint TP1
+U 1 1 5F820FDE
+P 7250 2250
+F 0 "TP1" V 7204 2438 50  0000 L CNN
+F 1 "3V3" V 7250 2600 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.5mm" H 7450 2250 50  0001 C CNN
+F 3 "~" H 7450 2250 50  0001 C CNN
+	1    7250 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP2
+U 1 1 5F82143B
+P 7250 2400
+F 0 "TP2" V 7204 2588 50  0000 L CNN
+F 1 "SDA" V 7250 2750 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.5mm" H 7450 2400 50  0001 C CNN
+F 3 "~" H 7450 2400 50  0001 C CNN
+	1    7250 2400
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP3
+U 1 1 5F82164F
+P 7250 2550
+F 0 "TP3" V 7204 2738 50  0000 L CNN
+F 1 "SCL" V 7250 2900 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.5mm" H 7450 2550 50  0001 C CNN
+F 3 "~" H 7450 2550 50  0001 C CNN
+	1    7250 2550
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP4
+U 1 1 5F821880
+P 7250 2700
+F 0 "TP4" V 7204 2888 50  0000 L CNN
+F 1 "GND" V 7250 3050 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.5mm" H 7450 2700 50  0001 C CNN
+F 3 "~" H 7450 2700 50  0001 C CNN
+	1    7250 2700
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3V3 #PWR0104
+U 1 1 5F821AB6
+P 7150 2200
+F 0 "#PWR0104" H 7150 2050 50  0001 C CNN
+F 1 "+3V3" H 7165 2373 50  0000 C CNN
+F 2 "" H 7150 2200 50  0001 C CNN
+F 3 "" H 7150 2200 50  0001 C CNN
+	1    7150 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 5F821FF6
+P 7150 2750
+F 0 "#PWR0105" H 7150 2500 50  0001 C CNN
+F 1 "GND" H 7155 2577 50  0000 C CNN
+F 2 "" H 7150 2750 50  0001 C CNN
+F 3 "" H 7150 2750 50  0001 C CNN
+	1    7150 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 2250 7150 2250
+Wire Wire Line
+	7150 2250 7150 2200
+Wire Wire Line
+	7250 2700 7150 2700
+Wire Wire Line
+	7150 2700 7150 2750
+Wire Wire Line
+	7250 2400 7150 2400
+Wire Wire Line
+	7250 2550 7150 2550
+Text GLabel 7150 2400 0    50   Input ~ 0
+SDA
+Text GLabel 7150 2550 0    50   Input ~ 0
+SCL
+$Comp
+L Device:C_Small C2
+U 1 1 5F826678
+P 5500 3700
+F 0 "C2" H 5600 3700 50  0000 L CNN
+F 1 "100nF" H 5600 3600 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5500 3700 50  0001 C CNN
+F 3 "~" H 5500 3700 50  0001 C CNN
+	1    5500 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C1
+U 1 1 5F827408
+P 4800 3700
+F 0 "C1" H 4600 3700 50  0000 L CNN
+F 1 "100nF" H 4500 3600 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4800 3700 50  0001 C CNN
+F 3 "~" H 4800 3700 50  0001 C CNN
+	1    4800 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x06_Male J2
+U 1 1 5F82BB77
+P 8900 2250
+F 0 "J2" H 8850 2550 50  0000 C CNN
+F 1 "Conn_01x06_Male" H 8500 2450 50  0000 C CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x06_P2.00mm_Vertical" H 8900 2250 50  0001 C CNN
+F 3 "~" H 8900 2250 50  0001 C CNN
+	1    8900 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5F833A81
+P 9200 2650
+F 0 "#PWR01" H 9200 2400 50  0001 C CNN
+F 1 "GND" H 9205 2477 50  0000 C CNN
+F 2 "" H 9200 2650 50  0001 C CNN
+F 3 "" H 9200 2650 50  0001 C CNN
+	1    9200 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9100 2550 9200 2550
+Wire Wire Line
+	9200 2550 9200 2650
+Wire Wire Line
+	9100 2050 9200 2050
+Wire Wire Line
+	9200 2050 9200 1950
+Wire Wire Line
+	9100 2150 9200 2150
+Wire Wire Line
+	9100 2250 9200 2250
+Text GLabel 9200 2150 2    50   Input ~ 0
+INT1
+Text GLabel 9200 2250 2    50   Input ~ 0
+INT2
+$Comp
+L power:+3V3 #PWR02
+U 1 1 5F81DFA1
+P 5700 2000
+F 0 "#PWR02" H 5700 1850 50  0001 C CNN
+F 1 "+3V3" H 5715 2173 50  0000 C CNN
+F 2 "" H 5700 2000 50  0001 C CNN
+F 3 "" H 5700 2000 50  0001 C CNN
+	1    5700 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 5F81F1C9
+P 4800 3850
+F 0 "#PWR07" H 4800 3600 50  0001 C CNN
+F 1 "GND" H 4700 3750 50  0000 C CNN
+F 2 "" H 4800 3850 50  0001 C CNN
+F 3 "" H 4800 3850 50  0001 C CNN
+	1    4800 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR010
+U 1 1 5F81F616
+P 5500 3850
+F 0 "#PWR010" H 5500 3600 50  0001 C CNN
+F 1 "GND" H 5600 3750 50  0000 C CNN
+F 2 "" H 5500 3850 50  0001 C CNN
+F 3 "" H 5500 3850 50  0001 C CNN
+	1    5500 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 5F823381
+P 5150 5200
+F 0 "#PWR08" H 5150 4950 50  0001 C CNN
+F 1 "GND" H 5155 5027 50  0000 C CNN
+F 2 "" H 5150 5200 50  0001 C CNN
+F 3 "" H 5150 5200 50  0001 C CNN
+	1    5150 5200
+	1    0    0    -1  
+$EndComp
+NoConn ~ 9100 2350
+NoConn ~ 9100 2450
+$Comp
+L power:GND #PWR04
+U 1 1 5F8AE63E
+P 7150 4350
+F 0 "#PWR04" H 7150 4100 50  0001 C CNN
+F 1 "GND" H 7050 4250 50  0000 C CNN
+F 2 "" H 7150 4350 50  0001 C CNN
+F 3 "" H 7150 4350 50  0001 C CNN
+	1    7150 4350
+	-1   0    0    -1  
+$EndComp
+Text GLabel 5900 4500 2    50   Input ~ 0
+SDA
+Text GLabel 5900 4300 2    50   Input ~ 0
+SCL
+$Comp
+L Device:R_Small_US R3
+U 1 1 5F8B58A7
+P 6700 4100
+F 0 "R3" V 6800 4050 50  0000 L CNN
+F 1 "10kR" V 6600 4050 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 6700 4100 50  0001 C CNN
+F 3 "~" H 6700 4100 50  0001 C CNN
+	1    6700 4100
+	0    1    -1   0   
+$EndComp
+$Comp
+L power:+3V3 #PWR03
+U 1 1 5F8BB470
+P 7150 3850
+F 0 "#PWR03" H 7150 3700 50  0001 C CNN
+F 1 "+3V3" H 7165 4023 50  0000 C CNN
+F 2 "" H 7150 3850 50  0001 C CNN
+F 3 "" H 7150 3850 50  0001 C CNN
+	1    7150 3850
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 4100 7000 4100
+Wire Wire Line
+	7150 3900 7150 3850
+Wire Wire Line
+	7150 4350 7150 4300
+Wire Notes Line
+	4300 1700 9500 1700
+Wire Notes Line
+	9500 1700 9500 3050
+Wire Notes Line
+	9500 3050 4300 3050
+Wire Notes Line
+	4300 3050 4300 1700
+Wire Notes Line
+	4200 1700 4200 2950
+Wire Notes Line
+	4200 2950 3000 2950
+Wire Notes Line
+	3000 2950 3000 1700
+Wire Notes Line
+	3000 1700 4200 1700
+Text Notes 4350 3200 0    50   ~ 0
+Bosch BME680
+Text Notes 3050 1800 0    50   ~ 0
+Lego Mech Brick
+Text Notes 4350 1800 0    50   ~ 0
+Connectors and Test Points
+$Comp
+L Sensor:BME680 U?
+U 1 1 5F8B346E
+P 5150 4400
+F 0 "U?" H 4721 4446 50  0000 R CNN
+F 1 "BME680" H 4721 4355 50  0000 R CNN
+F 2 "Package_LGA:Bosch_LGA-8_3x3mm_P0.8mm_ClockwisePinNumbering" H 6600 3950 50  0001 C CNN
+F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BME680-DS001.pdf" H 5150 4200 50  0001 C CNN
+	1    5150 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 3800 5050 3700
+Wire Wire Line
+	5050 3700 5150 3700
+Wire Wire Line
+	5250 3700 5250 3800
+Connection ~ 5150 3700
+Wire Wire Line
+	5150 3700 5250 3700
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5F8B59F3
+P 6700 4550
+F 0 "#PWR?" H 6700 4400 50  0001 C CNN
+F 1 "+3V3" H 6715 4723 50  0000 C CNN
+F 2 "" H 6700 4550 50  0001 C CNN
+F 3 "" H 6700 4550 50  0001 C CNN
+	1    6700 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 3500 5150 3550
+Wire Wire Line
+	5150 3550 5500 3550
+Wire Wire Line
+	5500 3550 5500 3600
+Connection ~ 5150 3550
+Wire Wire Line
+	5150 3550 5150 3700
+Wire Wire Line
+	5150 3550 4800 3550
+Wire Wire Line
+	4800 3550 4800 3600
+Wire Wire Line
+	5500 3800 5500 3850
+Wire Wire Line
+	4800 3800 4800 3850
+Wire Wire Line
+	5050 5000 5050 5100
+Wire Wire Line
+	5050 5100 5150 5100
+Wire Wire Line
+	5250 5100 5250 5000
+Wire Wire Line
+	5150 5200 5150 5100
+Connection ~ 5150 5100
+Wire Wire Line
+	5150 5100 5250 5100
+$Comp
+L Device:R_Small_US R?
+U 1 1 5F8C53B2
+P 6250 4700
+F 0 "R?" V 6350 4650 50  0000 L CNN
+F 1 "10kR" V 6150 4650 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 6250 4700 50  0001 C CNN
+F 3 "~" H 6250 4700 50  0001 C CNN
+	1    6250 4700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5750 4700 6150 4700
+Wire Wire Line
+	6350 4700 6700 4700
+Wire Wire Line
+	6700 4700 6700 4550
+Wire Wire Line
+	5750 4500 5900 4500
+Wire Wire Line
+	5750 4300 5900 4300
+$Comp
+L Jumper:SolderJumper_3_Bridged12 JP1
+U 1 1 5F8B817B
+P 7150 4100
+F 0 "JP1" V 7196 4168 50  0000 L CNN
+F 1 "ADDR" V 7000 4150 50  0000 L CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm" H 7150 4100 50  0001 C CNN
+F 3 "~" H 7150 4100 50  0001 C CNN
+	1    7150 4100
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	5750 4100 6600 4100
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5F8E305A
+P 5150 3500
+F 0 "#PWR?" H 5150 3350 50  0001 C CNN
+F 1 "+3V3" H 5165 3673 50  0000 C CNN
+F 2 "" H 5150 3500 50  0001 C CNN
+F 3 "" H 5150 3500 50  0001 C CNN
+	1    5150 3500
+	-1   0    0    -1  
+$EndComp
+Wire Notes Line
+	7500 3100 7500 5500
+Wire Notes Line
+	7500 5500 4300 5500
+Wire Notes Line
+	4300 3100 7500 3100
+Wire Notes Line
+	4300 3100 4300 5500
+$EndSCHEMATC
