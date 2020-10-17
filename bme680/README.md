@@ -1,4 +1,4 @@
-# Internet of Things Sensor Brick (Base Project)
+# Bosch BME680 Internet of Things Sensor Brick (Base Project)
 
 This is the series of sensors for IoT projects, made on base of the famous brick game. This is compatible to the format to be used with others bricks to prototype quickly.
 
